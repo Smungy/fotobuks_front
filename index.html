@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotobuks</title>
+    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Sidebar -->
+    <div class="flex">
+        <div class="w-1/5 bg-gray-800 text-white h-screen">
+            <div class="p-4 text-center font-bold text-lg border-b border-gray-700">Fotobuks logo</div>
+            <nav class="p-4">
+                <ul>
+                    <li class="py-2"><a href="#" class="hover:bg-gray-700 p-2 rounded block">Menu</a></li>
+                    <li class="py-2"><a href="#" class="hover:bg-gray-700 p-2 rounded block">Fotógrafos</a></li>
+                    <li class="py-2"><a href="#" class="hover:bg-gray-700 p-2 rounded block">Clientes</a></li>
+                    <li class="py-2"><a href="#" class="hover:bg-gray-700 p-2 rounded block">Álbums</a></li>
+                </ul>
+            </nav>
+            <div class="p-4">
+                <button class="bg-red-600 hover:bg-red-700 w-full text-white py-2 rounded">Salir</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="w-4/5 p-4">
+            <div class="flex justify-between items-center mb-4">
+                <!-- Search Bar -->
+                <div class="w-2/3">
+                    <input type="text" id="search" class="w-full p-2 border border-gray-300 rounded" placeholder="Buscador">
+                </div>
+                <!-- Profile Icon and Name -->
+                <div class="w-1/6 text-right flex items-center justify-end">
+                    <div class="bg-gray-300 h-10 w-10 rounded-full inline-block"></div>
+                    <span class="ml-2">Perfil</span>
+                </div>
+            </div>
+
+            <!-- Table of Clients -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-lg font-bold mb-4">Clientes</h2>
+                <table class="w-full table-auto">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="p-2">Nombre</th>
+                            <th class="p-2">Apellidos</th>
+                            <th class="p-2">Teléfono</th>
+                            <th class="p-2">Evento</th>
+                        </tr>
+                    </thead>
+                    <tbody id="clientsTable">
+                        <!-- Dynamic rows will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
